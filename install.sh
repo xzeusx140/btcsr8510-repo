@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_USER="xZeusx"
+REPO_USER="xzeusx140"
 REPO_NAME="btcsr8510-repo"
 KEY_URL="https://$REPO_USER.github.io/$REPO_NAME/key.gpg"
 
