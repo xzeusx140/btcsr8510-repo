@@ -1,19 +1,15 @@
-name: Publish APT repo
+name: Build & Publish APT Repo
 
 on:
   push:
     branches: [ "main" ]
     paths:
       - "btcsr8510_*.deb"
-      - ".github/workflows/publish.yml"
       - "install.sh"
-      - "README.md"
+      - "repo-build.sh"
+      - "key.gpg"
+      - ".github/workflows/publish.yml"
   workflow_dispatch: {}
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build:
@@ -22,12 +18,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup tools
+      - name: Install APT tools
         run: |
-          sudo apt-get update
-          sudo apt-get install -y dpkg-dev gnupg
+          sudo apt update
+          sudo apt install -y dpkg-dev gnupg
 
-      - name: Import GPG key
+      - name: Import GPG signing key
         env:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
@@ -35,27 +31,23 @@ jobs:
           echo "$GPG_PRIVATE_KEY" | gpg --batch --import
           KEYID=$(gpg --list-keys --with-colons | awk -F: '/^pub:/ {print $5; exit}')
           echo "KEYID=$KEYID" | tee -a $GITHUB_ENV
-          if [ -n "$GPG_PASSPHRASE" ]; then
-            echo "passphrase:$GPG_PASSPHRASE" > gpg.pass
-          fi
 
-      - name: Find .deb
-        id: finddeb
+      - name: Find .deb package
+        id: deb
         run: |
           DEB=$(ls -1 btcsr8510_*.deb | head -n1)
-          if [ -z "$DEB" ]; then echo "No .deb uploaded. Add btcsr8510_*.deb to repo root."; exit 1; fi
+          [[ -z "$DEB" ]] && echo "❌ No btcsr8510_*.deb found" && exit 1
           echo "DEB=$DEB" | tee -a $GITHUB_ENV
 
-      - name: Build repo tree
+      - name: Build APT repo
         run: |
           bash repo-build.sh "$DEB" "$KEYID"
+
+      - name: Copy website files
+        run: |
           cp -f install.sh site/
           cp -f README.md site/
-
-      - name: Stash public key
-        run: |
-          # Export public key as key.gpg (ASCII armor ok)
-          gpg --export --armor "$KEYID" > site/key.gpg
+          cp -f key.gpg site/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -65,6 +57,13 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
