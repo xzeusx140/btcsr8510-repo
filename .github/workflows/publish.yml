@@ -1,0 +1,70 @@
+name: Publish APT repo
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "btcsr8510_*.deb"
+      - ".github/workflows/publish.yml"
+      - "install.sh"
+      - "README.md"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev gnupg
+
+      - name: Import GPG key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: |
+          echo "$GPG_PRIVATE_KEY" | gpg --batch --import
+          KEYID=$(gpg --list-keys --with-colons | awk -F: '/^pub:/ {print $5; exit}')
+          echo "KEYID=$KEYID" | tee -a $GITHUB_ENV
+          if [ -n "$GPG_PASSPHRASE" ]; then
+            echo "passphrase:$GPG_PASSPHRASE" > gpg.pass
+          fi
+
+      - name: Find .deb
+        id: finddeb
+        run: |
+          DEB=$(ls -1 btcsr8510_*.deb | head -n1)
+          if [ -z "$DEB" ]; then echo "No .deb uploaded. Add btcsr8510_*.deb to repo root."; exit 1; fi
+          echo "DEB=$DEB" | tee -a $GITHUB_ENV
+
+      - name: Build repo tree
+        run: |
+          bash repo-build.sh "$DEB" "$KEYID"
+          cp -f install.sh site/
+          cp -f README.md site/
+
+      - name: Stash public key
+        run: |
+          # Export public key as key.gpg (ASCII armor ok)
+          gpg --export --armor "$KEYID" > site/key.gpg
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
