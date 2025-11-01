@@ -1,0 +1,24 @@
+Architectures: all
+Codename: ubuntu-noble
+Components: main
+Date: Sat, 01 Nov 2025 01:15:22 +0000
+Description: CSR8510 firmware autoloader repo
+Label: btcsr8510
+Origin: btcsr8510
+Suite: ubuntu-noble
+MD5Sum:
+ c241680a2ef986f59fd10208689dc5e7              198 Release
+ 3b922dc7e43025f426bf786f982bcc71              681 main/binary-all/Packages
+ a020b0fefae8dfde5c591617fb1a8891              496 main/binary-all/Packages.gz
+SHA1:
+ f8721618b5f069caabff16cd3b4423b4bc3b577a              198 Release
+ d515f7089ca151b97eab79da6a75d22dfd600bca              681 main/binary-all/Packages
+ a8da8f084a8d1a837a1cd97f6feb8de5b490aff3              496 main/binary-all/Packages.gz
+SHA256:
+ e92a6813012ec81f2c56cd0ba78a2ea38cb2d28a4d1b2fe4d6090871f6936a98              198 Release
+ 5bebbf054e35298bc54c102d006f45822adb707b69cf81ee34475fa124ac177f              681 main/binary-all/Packages
+ 776de6aec3d4f5d24314b1dc1080d53772d0e130b26af78708020dd4c946a28d              496 main/binary-all/Packages.gz
+SHA512:
+ cc112c4b21e18703685f0c0e5202653e78d9d032f0d969dd3b9e056dffcaa994ef8f4db956217685230fe266cc302fb6fb5850217a8e9afe3e9185e2601d6899              198 Release
+ 2617a12d66e487eee4c493a4583516d2d946f372be6adfcbee8a954d75ae80358833220dca34f9ba4bc57eb8a69a1fd7b04a26858d3d211255e271a817d2a732              681 main/binary-all/Packages
+ d8ab7f4876f750aba045286987c2a3413c8a3a1f943c7c8cecf95735382fe650bc77edaa82902a3794b8e64fd8869feaa7a67de2f6135a5176f14432f5ccdec7              496 main/binary-all/Packages.gz

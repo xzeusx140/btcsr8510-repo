@@ -1,0 +1,17 @@
+Package: btcsr8510
+Version: 2025.01
+Architecture: all
+Maintainer: xZeusx
+Depends: bash, rfkill, systemd, coreutils, usbutils, bluez
+Filename: pool/main/b/btcsr8510/btcsr8510_2025.01_all.deb
+Size: 68684
+MD5sum: 712e7edf6abd76f2bae402d478870b02
+SHA1: 901284e6951ff63d42e3d9026d5034cd94d2ab1d
+SHA256: 5c2c8fc55bf59de5ee66ef301ae5f6a4198aa0f86e3fd5101f48c0f89955ff17
+Section: utils
+Priority: optional
+Description: CSR8510 A10 Auto-Firmware + Driver Manager (Kali/Debian)
+ A complete tool to manage CSR8510 A10 Bluetooth dongles on Linux.
+ Includes embedded firmware, firmware loader, watchdog, sleep resume hook,
+ CSR-only udev driver blocker, uninstall + purge, and a colorized TUI.
+

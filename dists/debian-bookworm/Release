@@ -1,0 +1,24 @@
+Architectures: all
+Codename: debian-bookworm
+Components: main
+Date: Sat, 01 Nov 2025 01:15:20 +0000
+Description: CSR8510 firmware autoloader repo
+Label: btcsr8510
+Origin: btcsr8510
+Suite: debian-bookworm
+MD5Sum:
+ 21eae842fa4aeb9bb48b34180206d50c              204 Release
+ 3b922dc7e43025f426bf786f982bcc71              681 main/binary-all/Packages
+ a020b0fefae8dfde5c591617fb1a8891              496 main/binary-all/Packages.gz
+SHA1:
+ 363d27a9b73fab3cb63330e1daf91b5aaa985ac1              204 Release
+ d515f7089ca151b97eab79da6a75d22dfd600bca              681 main/binary-all/Packages
+ a8da8f084a8d1a837a1cd97f6feb8de5b490aff3              496 main/binary-all/Packages.gz
+SHA256:
+ b8e02c06973f7bce2fc7ede232aed5981e1abf2236b6d84e4b86c300764951c9              204 Release
+ 5bebbf054e35298bc54c102d006f45822adb707b69cf81ee34475fa124ac177f              681 main/binary-all/Packages
+ 776de6aec3d4f5d24314b1dc1080d53772d0e130b26af78708020dd4c946a28d              496 main/binary-all/Packages.gz
+SHA512:
+ d3e65f687e391e004c52af46694087a439d634be9b727f297e6886cc52fa5f2c9daccc728c23b2e5c4a968ada4e660556300380d2beb4951ed1e557fed294403              204 Release
+ 2617a12d66e487eee4c493a4583516d2d946f372be6adfcbee8a954d75ae80358833220dca34f9ba4bc57eb8a69a1fd7b04a26858d3d211255e271a817d2a732              681 main/binary-all/Packages
+ d8ab7f4876f750aba045286987c2a3413c8a3a1f943c7c8cecf95735382fe650bc77edaa82902a3794b8e64fd8869feaa7a67de2f6135a5176f14432f5ccdec7              496 main/binary-all/Packages.gz

@@ -1,0 +1,24 @@
+Architectures: all
+Codename: parrot
+Components: main
+Date: Sat, 01 Nov 2025 01:15:22 +0000
+Description: CSR8510 firmware autoloader repo
+Label: btcsr8510
+Origin: btcsr8510
+Suite: parrot
+MD5Sum:
+ e6dadb0391db1a8455a3319eeddfe048              186 Release
+ 3b922dc7e43025f426bf786f982bcc71              681 main/binary-all/Packages
+ a020b0fefae8dfde5c591617fb1a8891              496 main/binary-all/Packages.gz
+SHA1:
+ 288210151b2439aca6d20010b313c5433fd4a06c              186 Release
+ d515f7089ca151b97eab79da6a75d22dfd600bca              681 main/binary-all/Packages
+ a8da8f084a8d1a837a1cd97f6feb8de5b490aff3              496 main/binary-all/Packages.gz
+SHA256:
+ 08f55e2d63c5e0070807b74756c90a727502324b63811dbe76b882befa3debf0              186 Release
+ 5bebbf054e35298bc54c102d006f45822adb707b69cf81ee34475fa124ac177f              681 main/binary-all/Packages
+ 776de6aec3d4f5d24314b1dc1080d53772d0e130b26af78708020dd4c946a28d              496 main/binary-all/Packages.gz
+SHA512:
+ 8214bba8bd8546bb2819a4c8f546efba85dfc234071cc88f716c91fa539a3ef18c6d196e063f8550d0b37fb210bdd670c96d6fcc344d19d7f3019a9a491f09b8              186 Release
+ 2617a12d66e487eee4c493a4583516d2d946f372be6adfcbee8a954d75ae80358833220dca34f9ba4bc57eb8a69a1fd7b04a26858d3d211255e271a817d2a732              681 main/binary-all/Packages
+ d8ab7f4876f750aba045286987c2a3413c8a3a1f943c7c8cecf95735382fe650bc77edaa82902a3794b8e64fd8869feaa7a67de2f6135a5176f14432f5ccdec7              496 main/binary-all/Packages.gz

@@ -1,0 +1,24 @@
+Architectures: all
+Codename: kali-rolling
+Components: main
+Date: Sat, 01 Nov 2025 01:15:12 +0000
+Description: CSR8510 firmware autoloader repo
+Label: btcsr8510
+Origin: btcsr8510
+Suite: kali-rolling
+MD5Sum:
+ e97ea1a9fdfa69a7530814e5a3dc30e1              198 Release
+ 3b922dc7e43025f426bf786f982bcc71              681 main/binary-all/Packages
+ a020b0fefae8dfde5c591617fb1a8891              496 main/binary-all/Packages.gz
+SHA1:
+ fbb29e1c4585856001a3d4d7268731bca18582b0              198 Release
+ d515f7089ca151b97eab79da6a75d22dfd600bca              681 main/binary-all/Packages
+ a8da8f084a8d1a837a1cd97f6feb8de5b490aff3              496 main/binary-all/Packages.gz
+SHA256:
+ 633a907a63f0b123d2ec494ce198ae5901846820ba5fa283132b566a9b3a769d              198 Release
+ 5bebbf054e35298bc54c102d006f45822adb707b69cf81ee34475fa124ac177f              681 main/binary-all/Packages
+ 776de6aec3d4f5d24314b1dc1080d53772d0e130b26af78708020dd4c946a28d              496 main/binary-all/Packages.gz
+SHA512:
+ 83860de4865f7306afb19ffa082a8505f55f6f1c22669a3c2efb94ed98debbdbee3619247396e6c1d985c57153600746628778b3da99f61db721010ff10ac687              198 Release
+ 2617a12d66e487eee4c493a4583516d2d946f372be6adfcbee8a954d75ae80358833220dca34f9ba4bc57eb8a69a1fd7b04a26858d3d211255e271a817d2a732              681 main/binary-all/Packages
+ d8ab7f4876f750aba045286987c2a3413c8a3a1f943c7c8cecf95735382fe650bc77edaa82902a3794b8e64fd8869feaa7a67de2f6135a5176f14432f5ccdec7              496 main/binary-all/Packages.gz

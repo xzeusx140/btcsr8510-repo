@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: all
+Codename: ubuntu-jammy
+Components: main
+Date: Sat, 01 Nov 2025 01:15:21 +0000
+Description: CSR8510 firmware autoloader repo
+Label: btcsr8510
+Origin: btcsr8510
+Suite: ubuntu-jammy
+MD5Sum:
+ 368550617929dcaaf07a5e82a3ac963f              198 Release
+ 3b922dc7e43025f426bf786f982bcc71              681 main/binary-all/Packages
+ a020b0fefae8dfde5c591617fb1a8891              496 main/binary-all/Packages.gz
+SHA1:
+ 117908759111f134a36f616f3e87a806079a4e86              198 Release
+ d515f7089ca151b97eab79da6a75d22dfd600bca              681 main/binary-all/Packages
+ a8da8f084a8d1a837a1cd97f6feb8de5b490aff3              496 main/binary-all/Packages.gz
+SHA256:
+ 60ea239bf3699c9fda6c0a4ed6efeccf7616acb8a4a9ab0988dd701d7f61b720              198 Release
+ 5bebbf054e35298bc54c102d006f45822adb707b69cf81ee34475fa124ac177f              681 main/binary-all/Packages
+ 776de6aec3d4f5d24314b1dc1080d53772d0e130b26af78708020dd4c946a28d              496 main/binary-all/Packages.gz
+SHA512:
+ c9c9910399573adc5c689c49c516521d2c62751e72e405e68ca6ea51def67ca402020d986f8a1efc1dbef4a7090490490818b0c513be5daa5bca975e856e2549              198 Release
+ 2617a12d66e487eee4c493a4583516d2d946f372be6adfcbee8a954d75ae80358833220dca34f9ba4bc57eb8a69a1fd7b04a26858d3d211255e271a817d2a732              681 main/binary-all/Packages
+ d8ab7f4876f750aba045286987c2a3413c8a3a1f943c7c8cecf95735382fe650bc77edaa82902a3794b8e64fd8869feaa7a67de2f6135a5176f14432f5ccdec7              496 main/binary-all/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE8kKNIGaREBtjHj3EjsVU8Xvs2IoFAmkFXykACgkQjsVU8Xvs
+2IpVQw//U0uT41PPCdl5FLeriS1CwN3CaocmLEgWSYXhYkBIeihg5qxG/pGIqj6x
+sNmhijPqTQMHmkjlLvVUuRa6FwTWz4u8k2EMi4Vp2D5UAA+TR+66xiGXT548K2wH
+emhFaw0HTwW+XGsVJhgTv8FHWgD4bjRklHABF+Ln/Z7wv+r1npCQPv3W3QRRF4Mc
+GwwMvI7KU3//vhiMnYkP5TakFlMYFJouOc8VQPZ++iPS7sRFlCqNAF8Wbwxn7Drf
+bLbjEqaTJaOnMdKUCyyh50VdA2xcZst4WKRMIpSWVABnqKPJPfVhY2LrZHhIhalR
++bmyJGCwLydHYzuRX5T/s2vvxzjDPHC1Nyzdw2eLJ9blE64jt+j9BsLx6rZS6PB9
+vPs+zns3M4R4irW0wBuX8XoYclz6iVLYy7/Fv+gL8GyMAC/h/7wRLgLH2znxJH8/
+Ieq5qgZX/p8jHc/Fyj4Tbn3B5pSxdJg1kx9z1yVWbwoiZ4+/t+Nl/Gmol4WNhC9C
+0OKYWah05Uq9bCZoc1Aovt4Xrmdcz5x3sXuzbEvtlKIeEwyG0tVzP3rnPUHQHMjc
+7Gj6f19wnsdjw9g+XTmTskPgSrGs0gYZ2h6/yuKiE9W6Oow/Y360c9KXRVYQoe2W
+7xl+TKFXlkWqliRxeIHb4SdA1dIldJMtO7xBvz1TCpLo2+37m2w=
+=z5fb
+-----END PGP SIGNATURE-----
